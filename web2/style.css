@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    height: 50px;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+header h1 {
+    margin: 0 20px 0 0;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: tomato;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10px 0;
+    flex-grow: 1;
+}
+
+img {
+    max-width: 700px;
+    max-height: 500px;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+}
+
+th, td {
+    margin: 0;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+#footer {
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Форма обратной связи */
+#feedback form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin-top: 10px;
+}
+
+#feedback label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#feedback input,
+#feedback input,
+#feedback select,
+#feedback textarea,
+#feedback input {
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+#feedback input[type="radio"],
+#feedback input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#feedback button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#feedback button:hover {
+    background-color: #cc4f39;
+}
+
+/* Форма аутентификации */
+#auth-section {
+    background-image: url('imgBack.webp'); /* Замените на путь к фоновому изображению */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+#auth-form {
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+#auth-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#auth-form label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#auth-form input,
+#auth-form input {
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#auth-form input {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+#auth-form button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#auth-form button:hover {
+    background-color: #cc4f39;
+}

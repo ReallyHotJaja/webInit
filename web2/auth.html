@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Вход - Food construct</title>
+ 
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Food construct</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="#">Собрать ланч</a>
+            <a href="#">Заказы</a>
+            <a href="index.html#footer">Контакты</a>
+            <a href="auth.html">Войти</a>
+        </nav>
+    </header>
+    <section id="auth-section">
+        <form action="https://httpbin.org/post" method="POST" id="auth-form">
+            <h2>Вход</h2>
+
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login" placeholder="Введите логин" required />
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required />
+
+            <label><input type="checkbox" name="remember" /> Запомнить меня</label>
+
+            <button type="submit">Войти</button>
+        </form>
+    </section>
+</body>
+</html>
