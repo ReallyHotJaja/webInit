@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LunchBox Express</title> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="print.css" media="print"> 
+</head>
+<body>
+  <header>
+    <div class="logo">LunchBox Express</div> 
+    <nav>
+      <a href="index.html" class="active">Главная</a>
+      <a href="#delivery">Доставка</a>
+      <a href="login.html">Войти</a>
+      <a href="feedback.html">Обратная связь</a>      
+      <a href="lunch.html">Собрать ланч</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>О нас</h2>
+      <img src="https://img.freepik.com/free-photo/healthy-lunch-box-with-rice-salmon-vegetables_1205-1829.jpg" alt="Бизнес-ланч">
+      <p><strong>LunchBox Express</strong> - это сервис быстрой доставки бизнес-ланчей. 
+        Мы готовим свежие блюда каждый день и привозим их прямо в офис или домой. 
+        Наши обеды - это вкусно, полезно и удобно!</p>
+    </section>
+
+    <section id="menu">
+      <h2>Меню бизнес-ланчей</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr> 
+              <th>Блюдо</th> 
+              <th>Описание</th> 
+              <th>Цена</th> 
+            </tr>
+          </thead>
+          <tbody> 
+            <tr>
+              <td data-label="Блюдо">Куриный суп</td>
+              <td data-label="Описание">Лёгкий суп с овощами и лапшой</td>
+              <td data-label="Цена">150₽</td>
+            </tr>
+            <tr>
+              <td data-label="Блюдо">Паста Карбонара</td>
+              <td data-label="Описание">Классическая паста с беконом и сливочным соусом</td>
+              <td data-label="Цена">280₽</td>
+            </tr>
+            <tr>
+              <td data-label="Блюдо">Стейк из лосося</td>
+              <td data-label="Описание">Филе лосося на гриле с овощами</td>
+              <td data-label="Цена">450₽</td>
+            </tr>
+            <tr>
+              <td data-label="Блюдо">Салат Цезарь</td>
+              <td data-label="Описание">Курица, пармезан и хрустящие сухарики</td>
+              <td data-label="Цена">220₽</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="delivery">
+      <h2>Доставка</h2>
+      <ul> 
+        <li>Доставка по городу - от 40 минут</li> 
+        <li>Бесплатно при заказе от 700₽</li>
+        <li>Работаем ежедневно с 9:00 до 19:00</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+    <p>Email: <a href="mailto:info@lunchbox.ru">info@lunchbox.ru</a></p> 
+    <p>© 2025 LunchBox Express</p> 
+  </footer>
+</body>
+</html>

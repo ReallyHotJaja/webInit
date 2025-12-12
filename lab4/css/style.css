@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+img{
+    width: 300px;
+    height: 200px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  width: 160px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #888;
+}
+
+.card.selected {
+  border: 2px solid #007bff;
+}
+
+.card img {
+  margin: 10px;
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #999;
+}
+
+#order-section {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+

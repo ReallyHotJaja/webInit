@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body > a {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.2s;
+      }
+
+      body > a:hover {
+        color: red;
+      }
+
+      #order-section p {
+        text-align: center;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Оформление заказа</h1>
+    <a href="index.html">← Вернуться</a>
+
+    <section id="order-section">
+      <h2>Состав заказа</h2>
+
+      <div id="order-list"></div>
+
+      <p>Итого: <span id="price">0</span> ₽</p>
+    </section>
+
+    <form id="order-form">
+      <input name="username" placeholder="Имя" required />
+      <input name="phone" placeholder="Телефон" required />
+      <input name="address" placeholder="Адрес" required />
+      <input name="email" placeholder="Email" required />
+      <button type="submit">Отправить заказ</button>
+    </form>
+
+    <div id="notify" class="notify hidden">
+      <div class="notify-box">
+        <p id="notify-text"></p>
+        <button id="notify-ok">ОК</button>
+      </div>
+    </div>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

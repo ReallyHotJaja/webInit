@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Комбо-конструктор</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      #checkout-panel {
+        display: flex !important;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      #go-checkout {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 8px;
+        transition: 0.2s;
+      }
+
+      #go-checkout:hover {
+        color: black;
+        background: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav">
+      <button onclick="location.href='index.html'">Собрать ланч</button>
+      <button onclick="location.href='checkout.html'">Оформить заказ</button>
+      <button onclick="location.href='orders.html'">Заказы</button>
+    </div>
+    
+    <h1>Комбо-конструктор</h1>
+
+    <div id="nav">
+      <button data-cat="soup" class="active">Супы</button>
+      <button data-cat="main">Главные блюда</button>
+      <button data-cat="starter">Салаты</button>
+      <button data-cat="dessert">Десерты</button>
+      <button data-cat="drink">Напитки</button>
+    </div>
+
+    <div id="menu"></div>
+
+    <div id="combo">
+      <h2>Ваше комбо</h2>
+      <div class="slot" data-type="soup">Суп — не выбран</div>
+      <div class="slot" data-type="main">Главное — не выбрано</div>
+      <div class="slot" data-type="starter">Салат — не выбран</div>
+      <div class="slot" data-type="dessert">Десерт — не выбран</div>
+      <div class="slot" data-type="drink">Напиток — не выбран</div>
+    </div>
+
+    <div id="total" style="color: white;">
+      Стоимость: <span id="price">0</span> ₽
+    </div>
+
+    <div id="checkout-panel" style="display: none">
+      <a href="checkout.html" id="go-checkout">Перейти к оформлению</a>
+    </div>
+
+    <div id="notify" class="notify hidden">
+      <div class="notify-box">
+        <p id="notify-text"></p>
+        <button id="notify-ok">ОК</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

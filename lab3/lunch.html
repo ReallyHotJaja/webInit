@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч - LunchBox Express</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="lunch.css"> 
+    <link rel="stylesheet" href="print.css" media="print"> 
+</head>
+<body>
+    <header>
+        <div class="logo">LunchBox Express</div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="index.html#delivery">Доставка</a>
+            <a href="login.html">Войти</a>
+            <a href="feedback.html">Обратная связь</a>      
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-section">
+            <h2>Супы</h2>
+            <div class="dishes-grid">
+                <div class="dish-card" data-name="Борщ с говядиной" data-price="200">
+                    <img src="https://placehold.co/400x300/f0e6d2/333333?text=Борщ" alt="Борщ">
+                    <p class="dish-price">200₽</p>
+                    <p class="dish-name">Борщ с говядиной</p>
+                    <p class="dish-weight">300 мл</p>
+                </div>
+                <div class="dish-card" data-name="Солянка мясная" data-price="250">
+                    <img src="https://placehold.co/400x300/d2f0e1/333333?text=Солянка" alt="Солянка">
+                    <p class="dish-price">250₽</p>
+                    <p class="dish-name">Солянка мясная сборная</p>
+                    <p class="dish-weight">300 мл</p>
+                </div>
+                <div class="dish-card" data-name="Куриный суп" data-price="150">
+                    <img src="https://placehold.co/400x300/d2d2f0/333333?text=Куриный+суп" alt="Куриный суп">
+                    <p class="dish-price">150₽</p>
+                    <p class="dish-name">Куриный суп с лапшой</p>
+                    <p class="dish-weight">300 мл</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Главные блюда</h2>
+            <div class="dishes-grid">
+                <div class="dish-card" data-name="Котлета по-киевски" data-price="350">
+                    <img src="https://placehold.co/400x300/f0d2d2/333333?text=Котлета" alt="Котлета с пюре">
+                    <p class="dish-price">350₽</p>
+                    <p class="dish-name">Котлета по-киевски с картофельным пюре</p>
+                    <p class="dish-weight">250 г</p>
+                </div>
+                <div class="dish-card" data-name="Паста Карбонара" data-price="380">
+                    <img src="https://placehold.co/400x300/e8f0d2/333333?text=Паста" alt="Паста">
+                    <p class="dish-price">380₽</p>
+                    <p class="dish-name">Паста Карбонара</p>
+                    <p class="dish-weight">280 г</p>
+                </div>
+                <div class="dish-card" data-name="Стейк из лосося" data-price="550">
+                    <img src="https://placehold.co/400x300/d2e8f0/333333?text=Стейк" alt="Стейк">
+                    <p class="dish-price">550₽</p>
+                    <p class="dish-name">Стейк из лосося с овощами гриль</p>
+                    <p class="dish-weight">220 г</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Напитки</h2>
+            <div class="dishes-grid">
+                <div class="dish-card" data-name="Морс клюквенный" data-price="100">
+                    <img src="https://placehold.co/400x300/f0f0d2/333333?text=Морс" alt="Морс">
+                    <p class="dish-price">100₽</p>
+                    <p class="dish-name">Морс клюквенный</p>
+                    <p class="dish-weight">500 мл</p>
+                </div>
+                <div class="dish-card" data-name="Лимонад домашний" data-price="120">
+                    <img src="https://placehold.co/400x300/f0d2e2/333333?text=Лимонад" alt="Лимонад">
+                    <p class="dish-price">120₽</p>
+                    <p class="dish-name">Лимонад домашний</p>
+                    <p class="dish-weight">500 мл</p>
+                </div>
+                <div class="dish-card" data-name="Вода негазированная" data-price="80">
+                    <img src="https://placehold.co/400x300/d2f0f0/333333?text=Вода" alt="Вода">
+                    <p class="dish-price">80₽</p>
+                    <p class="dish-name">Вода негазированная</p>
+                    <p class="dish-weight">500 мл</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="order-section">
+    <h2>Сделать заказ</h2>
+    <div id="success-message" class="success-message" style="display:none;">Ваш заказ успешно оформлен! Менеджер скоро с вами свяжется.</div>
+    <div class="order-container">
+        <div class="order-form" style="width:100%;">
+            <h3>Ваш заказ</h3>
+            <form id="static-order-form">
+                <div class="form-group">
+                    <label for="soup-select">Суп:</label>
+                    <select id="soup-select" required>
+                        <option value="" disabled selected>Выберите суп</option>
+                        <option>Борщ с говядиной</option>
+                        <option>Солянка мясная сборная</option>
+                        <option>Куриный суп с лапшой</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="main-select">Главное блюдо:</label>
+                    <select id="main-select" required>
+                        <option value="" disabled selected>Выберите блюдо</option>
+                        <option>Котлета</option>
+                        <option>Паста Карбонара</option>
+                        <option>Стейк из лосося</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="drink-select">Напиток:</label>
+                    <select id="drink-select" required>
+                        <option value="" disabled selected>Выберите напиток</option>
+                        <option>Морс клюквенный</option>
+                        <option>Лимонад домашний</option>
+                        <option>Вода негазированная</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="customer-name">Имя:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Номер телефона:</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">Адрес доставки:</label>
+                    <input type="text" id="customer-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-comments">Комментарии к заказу:</label>
+                    <textarea id="order-comments" rows="3"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="reset" class="reset-btn">Очистить</button>
+                    <button type="submit" class="submit-btn">Заказать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <footer id="contacts">
+        <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+        <p>Email: <a href="mailto:info@lunchbox.ru">info@lunchbox.ru</a></p>
+        <p>© 2025 LunchBox Express</p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обратная связь - LunchBox Express</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html" style="color: white; text-decoration: none;">LunchBox Express</a></div>
+    <nav>
+      <a href="index.html" class="active">Главная</a>
+      <a href="index.html#delivery">Доставка</a>
+      <a href="login.html">Войти</a>
+      <a href="feedback.html">Обратная связь</a>      
+      <a href="lunch.html">Собрать ланч</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="feedback-form">
+      <h2>Форма обратной связи</h2>
+      <form action="https://httpbin.org/post" method="POST" class="feedback-form" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="fullName">ФИО:</label>
+          <input placeholder = "Иванов Иван Иванович" type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group"> 
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Откуда узнали о нас?</label>
+
+          <div class="radio-group">
+            <input type="radio" id="source_friends" name="source" value="friends">
+            <label for="source_friends">От друзей</label>
+            <input type="radio" id="source_internet" name="source" value="internet">
+            <label for="source_internet">Из интернета</label>
+            <input type="radio" id="source_ad" name="source" value="ad">
+            <label for="source_ad">Реклама</label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="appealType">Тип обращения:</label>
+          <select id="appealType" name="appealType">
+            <option value="complaint">Жалоба</option>
+            <option value="suggestion">Предложение</option>
+          </select>
+        </div>
+
+        <div class="form-group"> 
+          <label for="message">Текст сообщения:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="attachment">Вложение:</label>
+          <input type="file" id="attachment" name="attachment">
+        </div>
+
+        <div class="form-group-checkbox">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">Даю согласие на обработку персональных данных</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+    <p>Email: <a href="mailto:info@lunchbox.ru">info@lunchbox.ru</a></p>
+    <p>© 2025 LunchBox Express</p>
+  </footer>
+</body>
+</html>

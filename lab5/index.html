@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Меню ресторана</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Меню ресторана</h1>
+
+    <div id="nav">
+      <button data-cat="main" class="active">Главные блюда</button>
+      <button data-cat="soup">Супы</button>
+      <button data-cat="starter">Стартеры / Салаты</button>
+      <button data-cat="drink">Напитки</button>
+    </div>
+
+    <div id="menu"></div>
+
+    <h2>Ваш заказ</h2>
+    <div id="order">Ничего не выбрано</div>
+    <div id="total">Стоимость: <span id="price">0</span> ₽</div>
+
+    <form id="order-form">
+      <input name="username" placeholder="Имя" required />
+      <input name="phone" placeholder="Телефон" required />
+      <button id="submit">Отправить заказ</button>
+    </form>
+
+    <script src="./script/dishes.js"></script>
+    <script src="./script/main.js"></script>
+  </body>
+</html>

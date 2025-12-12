@@ -1,0 +1,294 @@
+body {
+  font-family: sans-serif;
+  background: #fff;
+  padding: 20px;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+header nav a.active {
+    color: #d84315;
+}
+
+.combo-info {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-items: center;
+}
+
+.combo-option {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.combo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65px;
+}
+
+.combo-icon {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: default;
+}
+
+.combo-icon:hover {
+    transform: translateY(-5px) scale(1.2);
+}
+
+.dessert-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.dessert-info .combo-item {
+    width: auto;
+}
+.dessert-info small {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.combo-item span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dessert-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.dessert-info .combo-item {
+    width: auto;
+}
+.dessert-info small {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#nav button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-weight: 600;
+}
+#nav button.active {
+  background: #ffab91;
+  color: #000;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.menu-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.menu-section.hidden {
+  display: none;
+}
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  justify-content: center;
+}
+.card {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  padding-bottom: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card h3 {
+  font-size: 18px;
+  margin: 12px 10px;
+}
+.sizes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    background: #f5f5f5;
+    padding: 5px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 5px auto;
+}
+.sizes label {
+    cursor: pointer;
+    font-size: 13px;
+}
+input.count {
+  width: 50px;
+  padding: 5px;
+  margin-top: 8px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  background: #ffab91;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+    background: #ff8a65;
+}
+.card.selected {
+  border: 2px solid #d84315;
+}
+
+#order {
+  max-width: 600px;
+  margin: 15px auto;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+#total {
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form label {
+    font-size: 14px;
+    margin-bottom: -5px;
+    color: #555;
+}
+form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+#submit {
+    background: #fff;
+    border: 2px solid #333;
+    color: #333;
+    margin-top: 20px;
+}
+#submit:hover {
+    background: #333;
+    color: #fff;
+}
+
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.notification-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-box p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.notification-box button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s;
+}
+
+.notification-box button:hover {
+    background: #ffab91;
+    color: #fff;
+    border-color: #ffab91;
+}

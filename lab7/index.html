@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Комбо конструктор</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Комбо-конструктор</h1>
+
+    <div id="nav">
+      <button data-cat="main" class="active"></button>
+      <button data-cat="soup"></button>
+      <button data-cat="starter"></button>
+      <button data-cat="dessert"></button>
+      <button data-cat="drink"></button>
+    </div>
+
+    <div id="menu"></div>
+    <div id="combo">
+      <h2>Ваше комбо</h2>
+      <div class="slot" data-type="main">Главное — не выбрано</div>
+      <div class="slot" data-type="soup">Суп — не выбран</div>
+      <div class="slot" data-type="starter">Салат — не выбран</div>
+      <div class="slot" data-type="dessert">Десерт — не выбран</div>
+      <div class="slot" data-type="drink">Напиток — не выбран</div>
+    </div>
+
+    <div id="total" style="color: white;">
+    Стоимость: <span id="price">0</span> ₽ </div>
+
+    <form id="order-form">
+      <input name="username" placeholder="Имя" required />
+      <input name="phone" placeholder="Телефон" required />
+      <input name="address" placeholder="Адрес" required />
+      <input name="email" placeholder="Почта" required />
+      <button type="submit">Отправить заказ</button>
+    </form>
+    <script src="main.js"></script>
+    <footer id="footer">
+            Позвоните нам: +79824025160
+            </footer>
+  </body>
+</html>

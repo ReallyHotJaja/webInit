@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню ресторана</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <h1>Меню ресторана</h1>
+
+  <section>
+    <h2>Супы</h2>
+    <div id="soups" class="cards"></div>
+  </section>
+
+  <section>
+    <h2>Основные блюда</h2>
+    <div id="meals" class="cards"></div>
+  </section>
+
+  <section>
+    <h2>Напитки</h2>
+    <div id="drinks" class="cards"></div>
+  </section>
+
+  <section id="order-section">
+    <h2>Ваш заказ</h2>
+    <div id="order">Ничего не выбрано</div>
+    <div id="total" style="display:none;">Стоимость заказа: <span id="price"></span> ₽</div>
+  </section>
+
+  <form id="order-form" action="/submit" method="POST" enctype="multipart/form-data">
+    <h2>Сделать заказ</h2>
+    <input type="text" name="username" placeholder="Ваше имя" required>
+    <input type="number" name="phone" placeholder="Телефон" required>
+
+    <input type="hidden" name="soup_keyword" id="soup-keyword">
+    <input type="hidden" name="meal_keyword" id="meal-keyword">
+    <input type="hidden" name="drink_keyword" id="drink-keyword">
+
+    <button type="submit" id="submit" disabled>Отправить заказ</button>
+  </form>
+
+  <script src="./script/dishes.js"></script>
+  <script src="./script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>История заказов</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>История заказов</h1>
+    </header>
+
+    <main>
+      <table id="orders-table">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Дата оформления</th>
+            <th>Состав заказа</th>
+            <th>Стоимость</th>
+            <th>Время доставки</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody id="orders-body"></tbody>
+      </table>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 id="modal-title"></h3>
+          <button id="modal-close">✕</button>
+        </div>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <div id="notify" class="notify hidden">
+      <div class="notify-box">
+        <p id="notify-text"></p>
+        <button id="notify-ok">ОК</button>
+      </div>
+    </div>
+
+    <script src="orders.js"></script>
+  </body>
+</html>
